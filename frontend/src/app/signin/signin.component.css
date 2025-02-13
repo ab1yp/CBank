@@ -1,0 +1,5 @@
+@media (min-width: 450px) {
+    .ssm\:max-w-sm {
+        max-width: 24rem /* 384px */;
+    }
+}

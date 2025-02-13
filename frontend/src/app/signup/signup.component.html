@@ -1,0 +1,59 @@
+<section class="w-full h-screen flex flex-col items-center justify-center">
+    <div *ngIf="signupStateForm" class="w-full ssm:max-w-sm h-screen sm:h-auto p-4 rounded-none sm:rounded-lg">
+        <div  class="space-y-6">
+            <h5 class="text-xl font-medium text-[#141414]">Create your Account</h5>
+            <div class="w-full flex justify-between space-x-2">
+                <div class="w-full">
+                  <label for="fullname" class="block mb-2 text-sm font-medium text-[#141414]">Full Name</label>
+                  <input [(ngModel)]="newUser.name" type="text" placeholder="Mohemmed Ali" required class=" text-[#141414] text-sm rounded-lg outline-none hover:scale-[1.01] duration-300 border-[1px] border-gray-500 focus:border-blue-900 block w-full p-2.5"/>
+                </div>
+            </div>
+            <div>
+              <label for="email" class="block mb-2 text-sm font-medium text-[#141414]">Email</label>
+              <input [(ngModel)]="newUser.email" type="email" placeholder="name@company.com" required class="text-[#141414] text-sm rounded-lg outline-none hover:scale-[1.01] duration-300 border-[1px] border-gray-500 focus:border-blue-900 block w-full p-2.5"/>
+            </div>
+            <div class="w-full flex justify-between space-x-2">
+              <div class="w-full">
+                <label for="password" class="block mb-2 text-sm font-medium text-[#141414]" >Password</label>
+                <input [(ngModel)]="newUser.password" type={{passtype}} placeholder="••••••••"  required  class="text-[#141414] text-sm rounded-lg outline-none hover:scale-[1.01] duration-300 border-[1px] border-gray-500 focus:border-blue-900 block w-full p-2.5"/>
+              </div>
+              <div class="w-full">
+                <label for="cpassword" class="block mb-2 text-sm font-medium text-[#141414]">Confirm Password</label>
+                <input type={{passtype}} id="cpassword" class="text-[#141414] text-sm rounded-lg outline-none hover:scale-[1.01] duration-300 border-[1px] border-gray-500 focus:border-blue-900 block w-full p-2.5" placeholder="••••••••" [(ngModel)]='cpassword' required />
+              </div>
+          </div>
+            <div class="flex items-start">
+                <div class="flex items-start">
+                  <div class="flex items-center me-4">
+                    <input type="checkbox" [(ngModel)]="checkbox" [(ngModel)]="checkbox" (change)="updatePassType()" class="w-4 h-4">
+                    <label class="ms-2 text-sm font-medium text-[#14141470]">Show Password</label>
+                  </div>
+                </div>
+            </div>
+            <button type="submit" (click)="send()" class="w-full text-white bg-blue-800 hover:scale-[1.01] duration-300 focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center ">Create an account</button>
+            <div class="ms-2 text-sm font-medium text-[#14141470]  pb-10">Already registered? <a href="signin" class="text-blue-800 hover:underline">Sign in</a></div>
+        </div>
+      </div>
+      <div *ngIf="signupStateSuccess" class="w-full h-screen p-8 rounded-lg flex items-center justify-center text-center absolute shadow-lg">
+        <div class="bg-white p-8 rounded-lg shadow-lg w-80 text-center">
+          <h2 class="text-2xl font-semibold text-green-600">Your Account Has Been Created Successfully</h2>
+          <p class="text-green-500 mt-4">Your account has been successfully created on the website. You can now log in and start using our services.</p>
+          <a href="signin" class="mt-6 inline-block cursor-pointer px-6 py-2 bg-green-500 text-white rounded-lg hover:bg-green-700">Sign In</a>
+        </div>
+      </div>
+      <div *ngIf="signupStateError" class="w-full h-screen p-8 rounded-lg flex items-center justify-center text-center absolute shadow-lg">
+        <div class="bg-white p-8 rounded-lg shadow-lg w-80 text-center">
+          <h2 class="text-2xl font-semibold text-[#d9534f]">This Account Already Exists</h2>
+          <p class="text-[#d9534fa0] mt-4">Sorry, this email is already registered. Please use a different email address.</p>
+          <a (click)="toSignup()" class="mt-6 cursor-pointer inline-block px-6 py-2 bg-[#d9534f] text-white rounded-lg hover:bg-[#c9302c]">Back to Register</a>
+        </div>
+      </div>
+      <div *ngIf="signupStatePassword" class="w-full h-screen p-8 rounded-lg flex items-center justify-center text-center absolute shadow-lg">
+        <div class="w-80 bg-white p-8 rounded-lg shadow-lg text-center">
+          <h2 class="text-2xl font-semibold text-[#d9534f]">Passwords Do Not Match</h2>
+          <p class="mt-4 text-[#d9534f]">Sorry, the passwords you entered do not match. Please make sure both fields are identical.</p>
+          <a (click)="toSignup()" class="mt-6 cursor-pointer inline-block px-6 py-2 bg-[#d9534f] text-white rounded-lg hover:bg-[#c9302c]">close</a>
+        </div>
+      </div>
+      
+</section>

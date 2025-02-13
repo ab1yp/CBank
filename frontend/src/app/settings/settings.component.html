@@ -1,0 +1,42 @@
+<div class="border-r-gray-400 w-full h-full flex justify-between">
+    <div class="navigation h-screen w-[40vh] px-2 py-10 border-r-2">
+        <ul class="space-y-2">
+            <li (click)="hiddenSectionFunc('account')" class="settings w-full h-12 flex justify-start items-center space-x-3 px-2 rounded-md hover:bg-blue-100 border border-gray-200 hover:border-blue-800 hover:shadow-md cursor-pointer">              
+                <a>account</a>
+            </li>      
+            <li (click)="hiddenSectionFunc('company')" class="settings w-full h-12 flex justify-start items-center space-x-3 px-2 rounded-md hover:bg-blue-100 border border-gray-200 hover:border-blue-800 hover:shadow-md cursor-pointer">              
+                <a>company</a>
+            </li>     
+            <li (click)="hiddenSectionFunc('roles')" class="settings w-full h-12 flex justify-start items-center space-x-3 px-2 rounded-md hover:bg-blue-100 border border-gray-200 hover:border-blue-800 hover:shadow-md cursor-pointer">              
+                <a>roles</a>
+            </li>     
+            <li (click)="hiddenSectionFunc('security')" class="settings w-full h-12 flex justify-start items-center space-x-3 px-2 rounded-md hover:bg-blue-100 border border-gray-200 hover:border-blue-800 hover:shadow-md cursor-pointer">              
+                <a>security</a>
+            </li>     
+            <li (click)="hiddenSectionFunc('schedule')" class="settings w-full h-12 flex justify-start items-center space-x-3 px-2 rounded-md hover:bg-blue-100 border border-gray-200 hover:border-blue-800 hover:shadow-md cursor-pointer">              
+                <a>schedule</a>
+            </li>     
+            <li (click)="hiddenSectionFunc('support')" class="settings w-full h-12 flex justify-start items-center space-x-3 px-2 rounded-md hover:bg-blue-100 border border-gray-200 hover:border-blue-800 hover:shadow-md cursor-pointer">              
+                <a>support</a>
+            </li>        
+        </ul>
+    </div>
+    <section *ngIf="currentSection === 'account'">
+        Account
+    </section>
+    <section *ngIf="currentSection === 'company'">
+        Company
+    </section>
+    <section *ngIf="currentSection === 'roles'">
+        Roles
+    </section>
+    <section *ngIf="currentSection === 'security'">
+        Security
+    </section>
+    <section *ngIf="currentSection === 'schedule'">
+        Schedule
+    </section>
+    <section *ngIf="currentSection === 'support	'">
+        Support
+    </section>
+</div>

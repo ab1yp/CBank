@@ -1,0 +1,20 @@
+<div class="flex  justify-center">
+    <div class="navigation px-6 py-10 border-r-2">
+        <ul class="space-y-2">
+            <li *ngFor="let email of emails" (click)="selectEmail(email)" #vemail class="w-[37vh] px-2 py-1 h-16 rounded-md hover:bg-[#dbeafe] border border-gray-400 hover:border-[#1e40af] hover:shadow-md cursor-pointer bg-blue-50" [ngClass]="{'bg-[#dbeafe] border-[#1e40af]': selectedEmail.receiverId === email.receiverId}">                
+                <h1 class="font-semibold text-[13px]">{{email.senderName}}</h1>
+                <h4 class="font-medium text-[11px] opacity-80">{{email.title}}</h4>
+                <p class="font-normal text-[10px] w-[33vh] whitespace-nowrap text-ellipsis overflow-hidden opacity-50">{{email.content}}</p>
+            </li>
+        </ul>
+    </div>
+    <div class=" h-screen max-w-[130vh] flex items-start justify-center pl-20">
+        <div  *ngIf="inbox === true" class="px-10 py-5  w-full ">     
+            <div class="p-4 rounded-md bg-blue-100 border border-blue-800 shadow-md mb-10 min-w-[50vh] max-w-[80vh]">
+                <h4 class="text-xl font-bold w-full  text-gray-800">{{ selectedEmail.title }}</h4>
+              </div>
+            <h1 class=" font-bold flex  min-w-[50vh] max-w-[80vh] items-center pb-10">{{selectedEmail.content}}<span class="font-normal px-3 text-[11px] opacity-50"> {{selectedEmail.content}} ></span></h1>
+            <p><span> {{selectedEmail.content}}</span></p>
+        </div>
+    </div>
+</div>

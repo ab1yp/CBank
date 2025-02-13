@@ -1,0 +1,60 @@
+<section class="border-r-gray-400 w-full h-screen flex justify-between">
+    <div class="navigation hidden sm:inline h-screen w-[40vh] px-2 py-10 border-r-2 ">
+        <ul  class="space-y-2">
+            <li (click)="hiddenPageFunc('home')" class="home w-full h-12 flex justify-start items-center space-x-3 px-2 rounded-md hover:bg-blue-100 border border-gray-200 hover:border-blue-800 hover:shadow-md cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                </svg>
+                <a>Home</a>
+            </li>
+            <li (click)="hiddenPageFunc('inbox')" class="inbox w-full h-12 flex justify-start items-center space-x-3 px-2 rounded-md hover:bg-blue-100 border border-gray-200 hover:border-blue-800 hover:shadow-md cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 13.5h3.86a2.25 2.25 0 0 1 2.012 1.244l.256.512a2.25 2.25 0 0 0 2.013 1.244h3.218a2.25 2.25 0 0 0 2.013-1.244l.256-.512a2.25 2.25 0 0 1 2.013-1.244h3.859m-19.5.338V18a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18v-4.162c0-.224-.034-.447-.1-.661L19.24 5.338a2.25 2.25 0 0 0-2.15-1.588H6.911a2.25 2.25 0 0 0-2.15 1.588L2.35 13.177a2.25 2.25 0 0 0-.1.661Z" />
+                </svg>                  
+                <a>Inbox</a>
+            </li>
+            <li (click)="hiddenPageFunc('operators')" class="tasks w-full h-12 flex justify-start items-center space-x-3 px-2 rounded-md hover:bg-blue-100 border border-gray-200 hover:border-blue-800 hover:shadow-md cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z" />
+                </svg>                  
+                <a >Operators</a>
+            </li>
+            <li (click)="hiddenPageFunc('profile')" class="profile w-full h-12 flex justify-start items-center space-x-3 px-2 rounded-md hover:bg-blue-100 border border-gray-200 hover:border-blue-800 hover:shadow-md cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                </svg>                  
+                <a>Profile</a>
+            </li>
+            <li (click)="hiddenPageFunc('calendar')" class="calendar w-full h-12 flex justify-start items-center space-x-3 px-2 rounded-md hover:bg-blue-100 border border-gray-200 hover:border-blue-800 hover:shadow-md cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
+                </svg>                  
+                <a>Transfer</a>
+            </li>
+            <li><button (click)="exit()">Sign out</button></li>
+            <li><h1>{{userId}}</h1></li>
+        </ul>
+    </div>
+    <div *ngIf="currentPage === 'home'" class="home w-full flex justify-center mt-10">
+        <div class="m-4 relative px-5 py-4 flex w-72 h-28  items-center justify-center rounded-xl bg-gradient-to-br bg-blue-50 bg-clip-border text-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer hover:bg-[#dbeafe] border border-gray-400 hover:border-[#1e40af]">
+            <h1 class="font-bold text-[40px]">{{user.balance}} </h1>
+            <p class="text-[10px] absolute ml-44 mt-9">NEET</p>
+
+          </div>
+    </div>
+    <div *ngIf="currentPage === 'inbox'" class="inbox w-full flex">
+        <app-inbox></app-inbox>
+    </div>
+    <div *ngIf="currentPage === 'operators'" class="tasks w-full">
+        <app-operators></app-operators>
+    </div>
+    <div *ngIf="currentPage === 'profile'" class="profile w-full">
+        <app-profile></app-profile>
+    </div>
+    <div *ngIf="currentPage === 'calendar'" class="calendar w-full">
+        <h1>CALENDER</h1>
+    </div>
+    
+    
+</section>
+

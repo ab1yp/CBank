@@ -1,0 +1,35 @@
+    <div class="grid grid-cols-2 gap-4 w-full h-full p-5">
+        <!-- العنصر الأول الكبير -->
+        <div class="m-4 px-5 py-4 flex items-center h-[35rem] w-full flex-col rounded-xl bg-gradient-to-br bg-blue-50 bg-clip-border text-gray-700 shadow-lg transition-al border border-blue-800 cursor-pointer">
+            <div class=" w-[12rem] h-[12rem] mt-5">
+                <img src={{user.profile}} class="rounded-full w-full h-full object-cover" alt="">
+            </div>
+                <ul class="w-full flex flex-col justify-center h-full space-y-2 overflow-auto">
+                    <li><strong>Name: </strong> <span>{{user.name}}</span></li>
+                    <li><strong>Job Title: </strong> <span>{{user.jobTitle}}</span></li>
+                    <li><strong>Email: </strong> <span>{{user.email}}</span></li>
+                    <li><strong>Phone: </strong> <span>{{user.phone}}</span></li>
+                    <li><strong>Location: </strong> <span>{{user.location}}</span></li>
+                    <li><strong>Age: </strong> <span>{{user.age}}</span></li>
+                    <li><strong>Skills: </strong> <span>{{user.skills}}</span></li>
+                    <li><strong>Experience: </strong> <span>{{user.experience}}</span></li>
+                </ul>
+        </div>
+        
+        <div class="h-full m-4 justify-between">
+            <div class=" px-5 py-4 flex w-full mb-[1rem] h-[17rem] flex-col rounded-xl bg-gradient-to-br bg-clip-border text-gray-700 shadow-lg transition-all duration-300  bg-blue-100 border border-blue-800 cursor-pointer">
+                <h1 class="font-bold pb-2 mb-1 border-b-2 border-[#00000028]">Employee Summary</h1>
+                <p>{{user.summary}}</p>
+            </div>
+            <div class=" px-5 py-4 w-full justify-start items-start space-y-3 flex mt-[1rem] h-[17rem] flex-col rounded-xl bg-gradient-to-br bg-blue-50 bg-clip-border text-gray-700 shadow-lg transition-all duration-300  border border-blue-800 cursor-pointer">
+                <h1 class="mb-7 font-bold pb-2 border-b-2 border-[#00000028]">Work Documents</h1>
+                <div class="flex flex-wrap">
+                    <button class="m-1 text-white text-xs w-[8rem] py-[0.5rem] rounded-full bg-blue-800 hover:scale-[1.01] duration-300 hover:ring-4 focus:outline-none focus:ring-blue-300 font-medium"><i class="fa-solid fa-arrow-down mr-1"></i> Download CV</button>
+                    <button class="m-1 text-white text-xs w-[8rem] py-[0.5rem] rounded-full bg-blue-800 hover:scale-[1.01] duration-300 hover:ring-4 focus:outline-none focus:ring-blue-300 font-medium"><i class="fa-solid fa-arrow-down mr-1"></i> Download JAF</button>
+                    <button class="m-1 text-white text-xs w-[8rem] py-[0.5rem] rounded-full bg-blue-800 hover:scale-[1.01] duration-300 hover:ring-4 focus:outline-none focus:ring-blue-300 font-medium"><i class="fa-solid fa-arrow-down mr-1"></i> Download OLU</button>
+                    <button class="m-1 text-white text-xs w-[8rem] py-[0.5rem] rounded-full bg-blue-800 hover:scale-[1.01] duration-300 hover:ring-4 focus:outline-none focus:ring-blue-300 font-medium"><i class="fa-solid fa-arrow-down mr-1"></i> Download NDA</button>
+                    <button class="m-1 text-white text-xs w-[8rem] py-[0.5rem] rounded-full bg-blue-800 hover:scale-[1.01] duration-300 hover:ring-4 focus:outline-none focus:ring-blue-300 font-medium"><i class="fa-solid fa-arrow-down mr-1"></i> Download ECU</button>
+                </div>
+            </div>
+        </div>
+    </div>
