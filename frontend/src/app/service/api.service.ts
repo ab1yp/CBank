@@ -10,9 +10,9 @@ import { Observable } from 'rxjs';
 
 
 export class ApiService {
-  private usersApiUrl = 'http://localhost:3000/users'; // تأكد أن المنفذ صحيح
-  private emailsApiUrl = 'http://localhost:3000/emails'; // تأكد أن المنفذ صحيح
-  private operatorsApiUrl = 'http://localhost:3000/operators'; // تأكد أن المنفذ صحيح
+  private usersApiUrl = 'https://cbank.onrender.com/users';
+  private emailsApiUrl = 'https://cbank.onrender.com/emails';
+  private operatorsApiUrl = 'https://cbank.onrender.com/operators';
   constructor(private http: HttpClient) {}
   
 
