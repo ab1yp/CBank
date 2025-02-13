@@ -8,8 +8,13 @@ const bodyParser = require('body-parser');
 const app = express();
 
 
-app.use(cors());
 app.use(bodyParser.json());
+app.use(cors({
+    origin: ['http://localhost:4200', 'https://cbank.onrender.com'], // السماح بالنطاقين
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+  }));
+  
 
 // connect to mongoDB
 mongoose.connect('mongodb+srv://mangodb2025:mangodb2025@mangodb.jw0ti.mongodb.net/CBank')
