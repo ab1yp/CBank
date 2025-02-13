@@ -12,7 +12,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // connect to mongoDB
-mongoose.connect('mongodb://localhost:27017/UserDashboard')
+mongoose.connect('mongodb+srv://mangodb2025:mangodb2025@mangodb.jw0ti.mongodb.net/CBank')
 .then(() => console.log('MongoDB connection established!'))
 .catch(() => console.error('MongoDB connection error:'));
 
