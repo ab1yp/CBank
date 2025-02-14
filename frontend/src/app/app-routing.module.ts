@@ -7,7 +7,7 @@ import { HomeComponent } from './home/home.component';
 const routes: Routes = [
   { path: 'signup', component: SignupComponent },        // صفحة التسجيل
   { path: 'signin', component: SigninComponent },        // صفحة التسجيل
-  { path: 'home', component: HomeComponent },   // قائمة المستخدمين
+  { path: '', component: HomeComponent },   // قائمة المستخدمين
 
 
 ];
