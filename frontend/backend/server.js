@@ -6,14 +6,9 @@ const bodyParser = require('body-parser');
 
 //import express library
 const app = express();
-
-
-app.use(bodyParser.json());
-app.use(cors({
-    origin: ['http://localhost:4200', 'https://cbank.onrender.com'], // السماح بالنطاقين
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type', 'Authorization']
-  }));
+app.use(cors());
+app.use(express.json()); // لازم عشان يرجع JSON
+app.use(express.urlencoded({ extended: true }));
   
 
 // connect to mongoDB
